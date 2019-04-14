@@ -1,4 +1,4 @@
-package day5;
+	package day5;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +18,7 @@ public class AmazonProject
 	{
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:/Users/Saurabh Dhingra/workspace/libs/chromedriver_06042019/chromedriver.exe");
+				"C:/Users/Harish/Desktop/Selenium/Softwares Download/chromedriver_win32/chromedriver.exe");
 
 		driver = new ChromeDriver();
 
