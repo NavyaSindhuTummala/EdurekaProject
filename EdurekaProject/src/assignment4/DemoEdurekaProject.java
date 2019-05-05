@@ -16,10 +16,6 @@ public class DemoEdurekaProject
 		
 		edu.myProfileDemo();
 		
-	//	edu.courseSearchBox();
-		
-	//	edu.homePageDemo();
-		
 	}
 
 }

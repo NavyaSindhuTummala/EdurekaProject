@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Assignment7">
+  <test thread-count="5" name="ResgressionTest">
+    <classes>
+      <class name="assignment7.GmailAccountProject"/>
+    </classes>
+  </test> <!-- ResgressionTest -->
+</suite> <!-- Assignment7 -->

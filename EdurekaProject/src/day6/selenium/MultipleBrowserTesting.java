@@ -25,17 +25,17 @@ public class MultipleBrowserTesting
 		} else if(browserType.equalsIgnoreCase("edge")) 
 		  {
 			System.setProperty("webdriver.edge.driver",
-					"C:/Users/Saurabh Dhingra/workspace/libs/MicrosoftWebDriver.exe");
+					"C:/Users/Harish/git/EdurekaProject/EdurekaProject/libs/MicrosoftWebDriver.exe");
 
 			driver = new EdgeDriver();
 			
 		  } else if(browserType.equalsIgnoreCase("firefox")) 
 		    {
 			  System.setProperty("webdriver.gecko.driver",
-					"C:/Users/Saurabh Dhingra/workspace/libs/geckodriver-v0.20.1-win64/geckodriver.exe");
+						"C:/Users/Harish/git/EdurekaProject/EdurekaProject/libs/geckodriver-v0.20.1-win64/geckodriver.exe");
 
 			driver = new FirefoxDriver();
-		    } else 
+		    }else 
 		      {
 			   throw new Exception("Invalid browser type");
 		      }

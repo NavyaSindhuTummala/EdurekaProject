@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Assignment7]">
+  <test thread-count="5" name="ResgressionTest(failed)">
+    <classes>
+      <class name="assignment7.GmailAccountProject">
+        <methods>
+          <include name="verifyLoginToGmail"/>
+          <include name="invokeBrowser"/>
+          <include name="composeMail"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- assignment7.GmailAccountProject -->
+    </classes>
+  </test> <!-- ResgressionTest(failed) -->
+</suite> <!-- Failed suite [Assignment7] -->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Guru99TestSuite]" parallel="tests">
+  <test thread-count="5" name="Firefox Test(failed)" parallel="tests">
+    <parameter name="userPass" value="Uhusaja"/>
+    <parameter name="userid" value="mngr188555"/>
+    <parameter name="browserType" value="firefox"/>
+    <classes>
+      <class name="day7.Guru99Project">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="verifyLoginToGuru99"/>
+          <include name="invokeBrowser"/>
+          <include name="verifyTitleOfThePage"/>
+        </methods>
+      </class> <!-- day7.Guru99Project -->
+    </classes>
+  </test> <!-- Firefox Test(failed) -->
+  <test thread-count="5" name="Edge Test(failed)" parallel="tests">
+    <parameter name="userPass" value="Uhusaja"/>
+    <parameter name="userid" value="mngr188555"/>
+    <parameter name="browserType" value="edge"/>
+    <classes>
+      <class name="day7.Guru99Project">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="verifyLoginToGuru99" invocation-numbers="0"/>
+          <include name="invokeBrowser"/>
+        </methods>
+      </class> <!-- day7.Guru99Project -->
+    </classes>
+  </test> <!-- Edge Test(failed) -->
+</suite> <!-- Failed suite [Guru99TestSuite] -->

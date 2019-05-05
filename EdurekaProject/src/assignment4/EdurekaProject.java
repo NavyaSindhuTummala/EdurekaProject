@@ -1,5 +1,7 @@
 package assignment4;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,6 +20,10 @@ public class EdurekaProject
 		driver.manage().window().maximize();
 
 		driver.manage().deleteAllCookies();
+		
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get("https://www.edureka.co");
 	}
@@ -42,51 +48,61 @@ public class EdurekaProject
 			
 	} 
 	
-	public void myProfileDemo()
+	public void myProfileDemo() throws InterruptedException
 	{
-		driver.findElement(By.xpath("//a[@class='dropdown-toggle trackButton']")).click();
+		driver.findElement(By.xpath("//a[@class='dropdown-toggle trackButton']/span[@class='webinar-profile-name']")).click();
 		
 		driver.findElement(By.xpath("//ul[@class='dropdown-menu user-menu profile-xs hidden-sm hidden-xs']//a[@data-button-name='My Profile']")).click();
 		
-	}
-	
-/*	public void courseSearchBox() throws InterruptedException
-	{
-		driver.findElement(By.xpath("//input[@class='search_inp collapse giTrackElementHeader']")).sendKeys("Testing");
-		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.xpath("//i[@id='search-button-top']")).click();
+		driver.findElement(By.xpath("//a[@id='personal_details']/i[@class='icon-pr-edit']")).click();
 		
-		driver.findElement(By.xpath("//h3[text()='Manual Testing Certification Training']")).click();
+	//	driver.findElement(By.xpath("//input[@name='fullname']")).click();
 		
-        driver.findElement(By.xpath("//a[@data-action='Clicked_On_Curriculum_Nav']")).click();
-        
-        driver.findElement(By.xpath("//a[@data-action='Clicked_On_Certification_Nav']")).click();
+		driver.findElement(By.xpath("//input[@name='fullname']")).clear();
 		
-		driver.findElement(By.xpath("//a[@data-action='Clicked_On_FAQs_Nav']")).click();		
+		driver.findElement(By.xpath("//input[@name='fullname']")).sendKeys(" Sindhu");
+		
+	//	driver.findElement(By.xpath("//input[@name='phone_number']")).click();
+		
+		driver.findElement(By.xpath("//input[@name='phone_number']")).clear();
+		
+		driver.findElement(By.xpath("//input[@name='phone_number']")).sendKeys("9652851400");
+		
+		driver.findElement(By.xpath("//button[@class='btn btn-default pull-right verify-continue-btn']")).click();
+		
+				
+	//	driver.findElement(By.xpath("//input[@name='userSkill']")).click();
+			
+		driver.findElement(By.xpath("//input[@class='form-control form-element ng-pristine ng-valid ng-touched']")).clear();
+		
+		driver.findElement(By.xpath("//input[@class='form-control form-element ng-pristine ng-valid ng-touched']")).sendKeys(",Automation");
+		
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		
+	//	WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
+
+	//	Select selectDropdown = new Select(dropdown);
+
+	//	selectDropdown.selectByVisibleText(category);
+		
+		driver.findElement(By.xpath("//label[@class=\"radio-inline\"]/input[@value='true']")).click();
+		
+		driver.findElement(By.xpath("//button[@type=\"submit\"]")).click();
+		
+		driver.findElement(By.xpath("//button[@class=\"btn pull-right onboarding-primary-button\"]")).click();
 		
 		driver.navigate().back();
 		
-		driver.navigate().back();		
-		
-		driver.navigate().back();
+		driver.findElement(By.xpath("//section[@class=\"container-fluid bread_crum\"]//div[@class='col-lg-8 col-md-7 col-sm-6 col-xs-12 no-padding bread_left hidden-xs']//a[1]")).click();
 		
 		driver.findElement(By.className("ga-blog")).click();
 		
-	} 
-			
-	public void homePageDemo()
-		
-	{		
-		driver.findElement(By.linkText("About us")).click();
-		
-		driver.findElement(By.linkText("CULTURE")).click();
+		driver.findElement(By.xpath("//ul[@class='dropdown-menu user-menu profile-xs hidden-sm hidden-xs']//a[@data-button-name='Logout']")).click();
 		
 		driver.close();
-					
-	}  */
-	
-	
+		
+	}
 	
 }

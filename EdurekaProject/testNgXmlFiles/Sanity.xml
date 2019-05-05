@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+<groups>
+<run>
+<include name="Sanity"></include>
+</run>
+</groups>
+  <test thread-count="5" name="Test Run Example">
+    <classes>
+      <class name="day7.TestNGTesting"/>     
+    </classes>
+  </test> <!-- Test Run Example -->
+  
+  <test thread-count="5" name="Test Run Example 2">
+    <classes>
+      <class name="day7.testingExample"/>
+    </classes>
+  </test> <!-- Test Run Example 2 -->
+</suite> <!-- Test Suite -->
